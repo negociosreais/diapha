@@ -1,0 +1,11 @@
+/*--- Banner Home ---*/
+.boxBannerHome{width:920px;height:250px;margin:0;padding:0;float:left;clear:both;position:relative;margin-top: -27px}
+#tab{width:920px;height:250px;margin:0;padding:0;float:left;clear:both;position:absolute;top:0;}
+.ui-tabs-nav{top:10px;right:10px;position:absolute;margin:0;padding:0;background:none;float:left;clear:both;}
+.ui-tabs-panel{width:920px;height:250px;font-size:30px;text-align:center;}
+.ui-tabs-hide{display:none;}
+ul.ui-tabs-nav li{border:none;color:#fff;display:block;float:none;font-size:13px;margin:0 0 3px 0;padding:0;text-align:center;font-weight:bold;font-family:Calibri, Arial, Helvetica, sans-serif;float:left;clear:both;}
+ul.ui-tabs-nav li a:link, ul.ui-tabs-nav li a:visited, ul.ui-tabs-nav li a:active{color:#fff;display:block;line-height:12px;padding:4px 8px;text-decoration:none;outline:none;background-color:#2a2a2a;float:left;clear:both;}
+ul.ui-tabs-nav li.ui-tabs-selected{background-color:#099e2e;border:none;background-color:#099e2e;}
+ul.ui-tabs-nav li.ui-tabs-selected a{font-weight:bold;color:#fff;background-color:#099e2e;}
+

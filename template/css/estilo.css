@@ -1,0 +1,753 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+    margin: 0px;
+    padding: 0px;
+    background: #ffffff;
+    height: 100%
+}
+.clear {
+    clear: both;
+}
+.sem-borda {
+    border: 0 !important;
+}
+#wrap {
+    margin-top:0;
+    clear: both;
+    position: absolute;
+}
+.container {
+    width: 100%;
+    margin: 0;
+    float: left;
+}
+
+#cabecalho { 
+    text-align: left;
+    height:200px;
+    background: url('../img/bg_header.jpg') no-repeat;
+    background-position: center top;
+}
+#cabecalho .logo img {
+    margin-top: 30px;
+    float:left;
+}
+
+#cabecalho .opcoes {
+    float:right;
+    margin-top: 120px;
+    width: 550px;
+}
+
+.opcoes .social {
+    float:left;
+}
+
+.opcoes .busca {
+    float:right;
+    margin-top: 25px;
+}
+
+#conteudo {
+    height:auto;
+    width:920px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#rodape {
+    background: url('../img/bg_footer.jpg') no-repeat center top;
+    height:175px;
+}
+
+#rodape p {
+    font-size: 11px;
+    text-align:center;
+    color:#666666;
+    padding: 12px;
+}
+
+div#destaque{
+    font-size: 12px;
+    color:#000000;
+    padding:10px;
+    border: solid 1px #FF0000;
+    background-color: #FFFFCC;
+    line-height: 25px;
+}
+
+span.espaco{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+to{
+    font-weight:normal;
+    text-decoration:underline;
+}
+
+.top{
+    vertical-align:top !important;
+}
+.middle{
+    vertical-align:middle !important;
+}
+
+.center{
+    text-align: center !important;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+
+/* Link */
+
+
+a.destaque{
+    font-weight:normal;
+    color:red !important;
+}
+
+a.discreto{
+    color: #999999;
+    font-weight:normal;
+    text-decoration:none;
+}
+
+a.discreto:visited{
+    color: #999999;
+    font-weight:normal;
+    text-decoration:none;
+}
+
+a.botao {
+    background: url('../img/botao-m.png') no-repeat center bottom;
+    padding: 7px 26px 7px 26px;
+    color: #ffffff !important;
+}
+
+#div_paginacao a{
+    color: red !important;
+}
+
+/* Mensagens de Alerta */
+
+.error {
+    color: red !important;
+}
+
+#alerta {
+    font-family: Calibri, Arial;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 12px;
+    background-attachment: scroll;
+    background-color: #FFFFCC;
+    background-image: url(../img/icons/alert.png);
+    background-repeat: no-repeat;
+    background-position: 5pt 50%;
+    padding-left: 30px;
+    border: 1px solid #FFCC00;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+#erro {
+    font-family: Calibri, Arial;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 12px;
+    background-attachment: scroll;
+    background-image: url(../img/icons/exclamation.png);
+    background-repeat: no-repeat;
+    background-position: 5pt 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border: 1px solid #FF0000;
+}
+
+#sucesso, #info {
+    font-family: Calibri, Arial;
+    color: #003399;
+    text-decoration: none;
+    font-size: 12px;
+    background-attachment: scroll;
+    background-color: #FFFFFF;
+    background-image: url(../img/icons/information.png);
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+    padding-left: 30px;
+    border: 1px solid #003399;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+
+
+/**
+ * Página Inicial do Portal
+*/
+
+.banner {
+    width: 920px;
+    height: 250px;
+    background: url('../img/banner.jpg') no-repeat;
+    border: solid 1px #f2f2f2;
+}
+
+.banner-clear {
+    width: 920px;
+    border: solid 1px #ffffff;
+}
+
+.col-1 {
+    float:left;
+    width: 217px;
+    min-height: 200px;
+    margin: 5px 5px 5px 0;
+}
+
+.col-2 {
+    float:left;
+    width: 442px;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+
+.col-3 {
+    float:left;
+    width: 215px;   
+    margin: 5px 0 5px 5px;
+}
+
+/* Coluna 1 e 2 juntas */
+.col-1-2 {
+    float:left;
+    width: 675px;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+
+/* Coluna 2 e 3 juntas */
+.col-2-3 {
+    float:left;
+    width: 674px;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+
+/* Colunas 1, 2, 3  juntas */
+.col-1-2-3 {
+    float:left;
+    width: 910px;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+
+.box-sombra {
+    background:#f7f7f7;
+    border:1px solid #c6c9cc;
+    padding: 5px;
+    -moz-box-shadow: 0px 2px 4px #e3e3e3; /* FF3.5+ */
+    -webkit-box-shadow: 0px 2px 4px #e3e3e3; /* Saf3.0+, Chrome */
+    box-shadow: 0px 2px 4px #e3e3e3; /* Opera 10.5, IE 9.0 */
+    -moz-border-radius:5px;
+    border-radius: 5px;
+}
+
+.box-branco {
+    background:#ffffff;
+    border:1px solid #c6c9cc;
+    padding: 5px;
+    -moz-box-shadow: 0px 2px 4px #e3e3e3; /* FF3.5+ */
+    -webkit-box-shadow: 0px 2px 4px #e3e3e3; /* Saf3.0+, Chrome */
+    box-shadow: 0px 2px 4px #e3e3e3; /* Opera 10.5, IE 9.0 */
+    -moz-border-radius:5px;
+    border-radius: 5px;
+}
+
+.box-sombra h1 {
+    font-size: 18px;
+    border: 0;
+    margin: 5px 0 5px 0;
+    padding: 0;
+    height: 25px;
+    color: gray;
+    text-align: center;
+    border-bottom: dotted 1px gray;
+    text-shadow:1px 1px 0 #ffffff;
+    text-transform: uppercase;
+}
+
+.box-branco h1 {
+    font-size: 18px;
+    border: 0;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    height: 25px;
+    color: gray;
+    text-align: center;
+    border-bottom: dotted 1px gray;
+    text-shadow:1px 1px 0 #ffffff;
+    text-transform: uppercase;
+}
+
+.box-branco div.espaco {
+    padding: 10px;
+}
+
+.breadcrumb {
+    margin: 10px 0 10px 0;
+    height: 30px;
+    text-align: center;
+}
+
+.breadcrumb a {
+    color: gray;
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+}
+
+.breadcrumb a.atual {
+    font-weight: bold;
+}
+
+div.espaco {
+    height: 2px;
+}
+
+.table-cell {  
+    display: table-cell;
+}
+
+/**
+ * Página inicial do portal
+*/
+.encontre {
+    float:left;
+    width: 50%;
+}
+
+.encontre a div{
+    background: url('../img/btn_encontre.jpg') no-repeat center top;
+    height: 110px;
+
+}
+
+.encontre a:hover div{
+    background: url('../img/btn_encontre-hover.jpg') no-repeat center top;
+    height: 110px;
+}
+
+.anuncie {
+    float:left;
+    width: 50%;
+}
+
+.anuncie a div{
+    background: url('../img/btn_anuncie.jpg') no-repeat center top;
+    height: 110px;
+
+}
+
+.anuncie a:hover div{
+    background: url('../img/btn_anuncie-hover.jpg') no-repeat center top;
+    height: 110px;
+}
+
+/**
+ * Produtos em Destaque
+*/
+.destaque .produto {
+    margin: 3px 3px 5px 3px;
+    border-bottom: dotted 1px #666666;
+    font-size: 12px;
+    height: 100px;
+}
+
+.destaque .produto img {
+    margin-right: 3px;
+    border: solid 3px #ffffff;
+}
+
+
+/**
+ * Vendedor
+*/
+
+.vendedor span.creditos {
+    font-size: 22px;
+    border: 0;
+    color: red;
+    text-shadow:1px 1px 0 #ffffff;
+}
+
+.vendedor div.creditos h2 {
+    font-size: 18px;
+    border: 0;
+    text-shadow: none;
+    margin: 0;
+    text-align: center !important;
+}
+
+.vendedor .col-1 {
+    float:left;
+    width: 445px;
+}
+
+.vendedor .col-2 {
+    float:left;
+    width: 447px;
+
+}
+
+.vendedor h2 {
+    font-size: 18px;
+    text-align: center;
+    border-bottom: dotted 1px gray;
+}
+
+.creditos .col-1 {
+    float:left;
+    width: 284px !important;
+    min-height: 55px;
+}
+.creditos .col-2 {
+    float:left;
+    width: 284px !important;
+    min-height: 55px;
+}
+.creditos .col-3 {
+    float:left;
+    width: 283px !important;
+    min-height: 55px;
+}
+
+
+/**
+ * Catalogo de produtos
+*/
+
+.destaques .quadro {
+    background-color: #ffffe8;
+    height: 270px;
+    margin-top: 10px;
+}
+
+.destaques .quadro label {
+    padding: 10px 0 0 10px;
+    color: #FF0000;
+    font-size: 12px;
+}
+
+.produtos {
+
+}
+
+.produtos ul, .destaques ul {
+    text-align: center;
+}
+
+.produtos ul li, .destaques ul li {
+    float: left;
+    display: inline;
+    margin: 9px;
+    width: 150px;
+}
+
+.produtos div.img, .destaques div.img {
+    height: 100px;
+    background-color: #ffffff;
+    border: solid 3px #f2f2f2;
+    text-align: center;
+}
+
+.produtos h1.produto, .destaques h1.produto {
+    font-size: 12px;
+    color: #666666;
+    border: 0;
+    height: 63px;
+}
+
+.produtos span, .destaques span {
+    font-size: 11px;
+    color: #0066CC;
+    height: 25px;
+}
+
+.produtos a, .destaques a {
+    text-decoration: none;
+}
+
+.produtos .mostrar_mais {
+    clear: both;
+    text-align: center;
+    float: left;
+    margin-left: 45%;
+}
+
+
+/**
+ * Detalhes do produto
+*/
+
+.produto {
+
+}
+
+.produto .foto {
+    float: left;
+    margin: 3px;
+    width: 400px;
+}
+
+.produto .detalhes {
+    float: left;
+    margin: 3px;
+    width: 238px;
+}
+
+.produto .detalhes h1 {
+    font-size: 12px;
+    color: #0066CC;
+    border: 0;
+    height: auto;
+    text-align: left;
+}
+
+.produto .detalhes p {
+    font-size: 12px;
+    margin: 0;
+    color: gray;
+}
+
+.produto p.preco {
+    font-size: 11px;
+    color:  gray !important;
+}
+
+.produto .mais-detalhes {
+    clear: both;
+    margin: 3px;
+    padding: 10px;
+}
+
+.produto .mais-detalhes p {
+    font-size: 11px;
+    padding: 3px;
+}
+
+.produto .mais-detalhes h3 {
+    border-bottom: dashed 1px gray;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+
+
+/* Twitter */
+
+div.twitter {
+
+    height: 228px;
+    overflow: auto;
+
+}
+
+div.twitter h1 {
+    color: #0099FF;
+    text-transform: uppercase;
+    background: url('../img/twitt.png') no-repeat 10px top;
+}
+/* Planos */
+
+.planos {
+
+    background: url('../img/bg_planos.png') no-repeat center top;
+    width: 153px;
+    height: 185px;
+
+}
+
+.planos h1 {
+    border: 0;
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0066cc;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.planos .btn_contratar {
+    background: url('../img/botao-m.png') no-repeat center bottom;
+    height: 28px;
+    width: 130px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.planos .btn_contratar:hover {
+    background: url('../img/botao-m.png') no-repeat center top;
+    height: 28px;
+    width: 130px;
+    color: #333333;
+}
+
+.planos .nr_credito {
+    color: #ff0000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.planos .creditos {
+    color: #ff0000;
+    font-size: 22px;
+}
+.planos .peso {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left !important;
+}
+
+
+
+.planos .valor {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.planos .rcifrao {
+    color: #333333;
+    font-size: 11px;
+}
+
+.box-adwords {
+    font-size: 14px !important;
+}
+
+.box-adwords .col-1 {
+    width: 430px;
+    float:left;
+    margin: 10px;
+}
+
+.box-adwords .col-2 {
+    width: 430px;
+    float:left;
+    margin: 10px;
+}
+
+.box-adwords h1 {
+    margin-bottom: 40px;
+}
+
+.box-vantagens-gratis {
+    width: 300px;
+    float:left;
+    margin: 10px;
+}
+
+.box-vantagens-prepago {
+    width: 300px;
+    float:left;
+    margin: 10px;
+}
+
+.box-vantagens-gratis ul {
+    text-align: left;
+    list-style-image: url(../img/icons/ok.png);
+    list-style-position: inside;
+}
+
+.box-vantagens-prepago ul {
+    text-align: left;
+    list-style-image: url(../img/icons/ok.png);
+    list-style-position: inside;
+}
+
+/* Icones nos titulos */
+h1.destaque {
+    background: url('../img/icones/star.png') no-repeat 10px top;
+}
+
+h1.acesse {
+    background: url('../img/icones/lock.png') no-repeat 10px top;
+}
+
+h1.contato {
+    background: url('../img/icones/mail.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.quemsomos {
+    background: url('../img/icones/user.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.visao {
+    background: url('../img/icones/search.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.arp {
+    background: url('../img/icones/document.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.consultores {
+    background: url('../img/icones/help.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.servicos {
+    background: url('../img/icones/tools.png') no-repeat 10px top;
+    padding-left: 60px;
+}
+
+h1.categorias {
+    background: url('../img/icones/folder.png') no-repeat 10px top;
+}
+
+h1.tit_produtos {
+    background: url('../img/icones/shopping_cart.png') no-repeat 10px top;
+}
+
+h1.detalhes_produto {
+    background: url('../img/icones/settings.png') no-repeat 10px top;
+}
+
+/* Configurar Z-INDEX */
+
+#ui-datepicker-div {
+    z-index: 9999 !important;
+}
+
+/* Perfil legenda */
+div#perfil_legenda {
+    font-size: 12px;
+    color:#000000;
+    padding:10px;
+    margin: 0 0 0 10px;
+    border: solid 1px #FF0000;
+    background-color: #FFFFCC;
+    line-height: 25px;
+}

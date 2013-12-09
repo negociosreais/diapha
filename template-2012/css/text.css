@@ -1,0 +1,134 @@
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+
+body
+{
+    font-family: Century Gothic, Arial;
+    font-size: 12px;
+    color: gray;
+    line-height: 20px;
+}
+
+a:focus
+{
+    outline: 1px dotted invert;
+}
+
+a {
+    color: #0080ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #99CC00;
+}
+
+
+a.pequeno {
+    font-size: 11px !important;
+}
+
+
+hr
+{
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+}
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+
+h1 {
+    font-family: Century Gothic;
+    font-weight: normal;
+    color: #00ccff; 
+    font-size: 24px;
+    padding: 6px 10px 10px 10px;
+    border: 0 !important;
+}
+
+h2 {
+    font-family: Century Gothic;
+    font-size:18px;
+    line-height:1.2em;
+    color:gray;
+    font-weight:normal;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: Century Gothic;
+    font-size:18px;
+    line-height:1.2em;
+    color:gray;
+    font-weight:normal;
+    text-shadow:1px 1px 0 #ffffff;
+}
+h4 {
+    font-family: Century Gothic;
+    font-size:16px;
+    color:#e85a00;
+    font-weight:normal;
+    font-style:italic;
+    margin-bottom:25px;
+}
+
+h5 {
+    font-family: Century Gothic;
+    font-size:14px;
+    color:#e85a00;
+    font-weight:normal;
+    font-style:italic;
+}
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol
+{
+    list-style: decimal;
+}
+
+ul
+{
+    list-style: square;
+}
+
+li
+{
+    margin-left: 0px;
+}
+
+p {
+    font-family: Century Gothic;
+    margin: 10px;
+    color: #808080 !important;
+    font-size: 14px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+address,
+fieldset
+{
+    /*margin-bottom: 20px;*/
+    
+}
+
+h1 {
+    line-height: 20px;
+}

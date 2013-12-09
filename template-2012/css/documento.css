@@ -1,0 +1,194 @@
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+
+body
+{
+    font-size: 12px;
+    color: gray;
+    line-height: 20px;
+    background: url('../img/bg.png');
+}
+
+a:focus
+{
+    outline: 1px dotted invert;
+}
+
+a {
+    color: #0080ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #99CC00;
+}
+
+
+a.pequeno {
+    font-size: 11px !important;
+}
+
+
+hr
+{
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+}
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol
+{
+    list-style: decimal;
+}
+
+ul
+{
+    list-style: square;
+}
+
+li
+{
+    margin-left: 0px;
+}
+
+p {
+    font-family: Century Gothic;
+    margin: 10px;
+    color: #808080 !important;
+    font-size: 14px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+address,
+fieldset
+{
+    margin-bottom: 20px;
+    
+}
+
+.content {
+    
+}
+
+.documento {
+    border: solid 1px #cacaca;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 700px;
+    min-height: 300px;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 2px 4px #e3e3e3; /* FF3.5+ */
+    -webkit-box-shadow: 0px 2px 4px #e3e3e3; /* Saf3.0+, Chrome */
+    box-shadow: 0px 2px 4px #e3e3e3; /* Opera 10.5, IE 9.0 */
+    position: absolute;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: 75px;
+}
+
+.documento p:hover, 
+.documento h1:hover, 
+.documento h2:hover, 
+.documento h3:hover, 
+.documento h4:hover, 
+.documento table:hover, 
+.documento li:hover {
+    background-color: #ffffa6;
+     -moz-border-radius:5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 2px 4px #e3e3e3; /* FF3.5+ */
+    -webkit-box-shadow: 0px 2px 4px #e3e3e3; /* Saf3.0+, Chrome */
+    box-shadow: 0px 2px 4px #e3e3e3; /* Opera 10.5, IE 9.0 */
+    cursor: pointer;
+    
+}
+
+.comentado {
+    background-color: #ffffa6;
+}
+
+.comentarios {
+    width: 200px;
+    min-height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: 400px;
+}
+
+.comentarios .comentario {
+    background: #ffffff;
+    border: solid 1px #cacaca;
+    line-height: 15px;
+    width: 200px;
+    margin-left: 20px;
+    position: absolute;
+    -moz-box-shadow: 0px 2px 4px #e3e3e3; /* FF3.5+ */
+    -webkit-box-shadow: 0px 2px 4px #e3e3e3; /* Saf3.0+, Chrome */
+    box-shadow: 0px 2px 4px #e3e3e3; /* Opera 10.5, IE 9.0 */
+    cursor: pointer;
+}
+
+.comentario .item {
+    padding: 5px;
+    border-bottom: solid 1px #cacaca;
+}
+
+.ativo .item {
+    padding: 5px;
+    border-bottom: solid 1px #ffe572 !important;
+}
+
+.comentario .responder {
+    display: none;
+}
+
+.ativo .responder {
+    display: block;
+}
+
+.comentarios .ativo {
+    background: #fcfac6 !important;
+    border: solid 1px #ffe572 !important;
+    margin-left: 0 !important;
+    z-index: 999;
+}
+
+.comentarios .comentario img {
+    margin-right: 5px;
+}
+
+.comentarios .comentario .legenda {
+    font-size: 9px;
+}
+
+.comentarios .comentario .texto {
+    line-height: 10px;
+    margin-top: 5px;
+}
+
+.comentario textarea {
+    width: 185px;
+    height: 20px;
+    margin: 5px;
+    font-size: 11px;
+}
+
+.comentario button {
+    margin: 0 5px 5px;
+}

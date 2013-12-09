@@ -1,0 +1,2 @@
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/ezMark/js/jquery.ezmark.min.js"></script>
+<link href="<?= base_url() . TEMPLATE; ?>/js/ezMark/css/ezmark.css" rel="stylesheet" type="text/css" />

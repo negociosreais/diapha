@@ -1,0 +1,295 @@
+fieldset.form {
+    margin-bottom: 5px;
+}
+
+fieldset.form label {
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #999999;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    float: right;
+}
+
+fieldset.form .button {
+    -moz-border-radius:4px;
+    border:1px solid #AAAAAA;
+    padding:3px;
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #666666;
+    height: 20px;
+}
+
+fieldset.form td,th {
+    padding: 3px;
+    vertical-align: middle !important;
+}
+
+fieldset.form legend {
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #999999;
+    text-decoration: none;
+    padding: 0 0 10px 10px;
+}
+
+input[type=radio], input[type=checkbox] {
+    background: transparent;
+    border: 0;
+}
+
+input[type=radio]:hover, input[type=checkbox]:hover {
+    background: transparent;
+    border: 0;
+}
+
+input[type=text], input[type=file], input[type=password], select {
+    border:1px solid #AAAAAA;  
+    font-family: Century Gothic, Arial, Helvetica;
+    font-size: 11px !important;
+    color: #666666;
+    height: 35px;
+    -moz-border-radius:4px;
+    border-radius: 4px;
+    background:url(../img/bgInput.jpg);
+}
+
+select {
+    padding: 3px;
+    height: 29px;
+    margin: 0;
+}
+
+input[type=text]:hover, input[type=file]:hover, input[type=password]:hover, select:hover {
+    border:1px solid #0099FF;
+    background:url(../img/bgInput.jpg);
+}
+
+
+textarea {
+    -moz-border-radius:4px;
+    border-radius: 4px;
+    border:1px solid #AAAAAA;
+    padding:3px;
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 11px !important;
+    color: #666666;
+    background:url(../img/bgInput.jpg);
+}
+
+textarea:hover {
+    background:url(../img/bgInput.jpg);
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+select.error {
+    border: 1px solid red;
+}
+
+.checkbox {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+
+input.pagseguro {
+    height: 61px;
+    width: 99px;
+}
+
+/**
+ * Botões
+*/
+
+/*
+input[type="submit"]:hover, input[type="reset"]:hover, input[type=button]:hover, button:hover {
+    background: url(../img/botao-m.png) no-repeat center bottom;
+    border: 0;
+    height: 28px;
+    width: 130px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 11px;
+}*/
+
+.botao-buscar {
+    background: url(../img/botao-buscar.png) no-repeat center top !important;
+    height: 27px !important;
+    width: 50px !important;
+    text-indent:-9999em;
+}
+
+.botao-buscar:hover {
+    background: url(../img/botao-buscar.png) no-repeat center bottom !important;
+    height: 27px !important;
+    width: 50px !important;
+    text-indent:-9999em;
+}
+
+fieldset.busca {
+    background: #ffffff;
+    border: solid 1px #c0c0c0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+fieldset.busca legend {
+    border: solid 1px #999;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 20px;
+    background: #f2f2f2;
+}
+
+.error label {
+    display: block;
+    line-height: 1.8
+}
+
+a.botao-ui {
+    color: #333333;  
+}
+
+a.botao-ui:hover {
+    color: #000000;  
+}
+
+.botaoVerde {
+    background: url('../img/bgBotaoVerde.png') !important;
+    background-position: -2px -18px !important;
+    border:0;
+    cursor:pointer;
+    height: 30px !important;
+    color: #2f4c2a !important;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: bold !important;
+}
+
+.botaoAzul {
+    background: url('../img/bgBotaoAzul.png') !important;
+    background-position: -2px -18px !important;
+    border:0;
+    cursor:pointer;
+    height: 30px !important;
+    color: #074f8f !important;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: bold !important;
+}
+
+.botaoCinza {
+    background: url('../img/bgBotaoCinza.png') !important;
+    background-position: -2px -18px !important;
+    border:0;
+    cursor:pointer;
+    height: 30px !important;
+    color: #333333 !important;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: bold !important;
+}
+
+.btn btn-danger {
+    background: url('../img/bgbtn btn-danger.png') !important;
+    background-position: -2px -18px !important;
+    border:0;
+    cursor:pointer;
+    height: 30px !important;
+    color: #ffffff !important;
+    text-shadow:1px 1px 0 #000000;
+    font-weight: bold !important;
+}
+
+.botaoEncontrePequeno {
+    background: url('../img/botaoEncontrePequeno.png') !important;
+    background-position: -1px 0px !important;
+    border:0;
+    cursor:pointer;
+    height: 31px !important;
+    color: #333333 !important;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: bold !important;
+    width: 30px;
+}
+
+
+
+.required {
+    border-left: solid 3px #ff0000 !important;
+}
+
+/**
+ * Login
+*/ 
+.botaoLogin {
+    background: url('../img/botaoLogin.png') !important;
+    border:0;
+    cursor:pointer;
+    height: 30px !important;
+    width: 32px !important;
+}
+
+/* 
+ * Passo a passo 
+*/
+#header { text-align:center; margin: 0 0 20px 0; }
+.prev, .next { 
+    background: url('../img/bgBotaoCinza.png') !important;
+    background-position: -1px -18px !important;
+    border:0;
+    cursor:pointer;
+    height: 20px !important;
+    color: #333333 !important;
+    text-shadow:1px 1px 0 #ffffff;
+    font-weight: bold !important;
+    padding: 5px 20px 5px 20px;
+    -moz-border-radius:6px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Verdana;
+}
+.prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+.prev { float:left; margin: 0 0 0 3px}
+.next { float:left; margin: 0 0 0 3px}
+#steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+#steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3; margin: 0;}
+#steps li span {font-size:11px; display:block;}
+#steps li.current { color:#000;}
+#makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+#makeWizard:hover { background-color:#000;}
+
+/* 
+ * Perfil legenda 
+*/
+div#perfil_legenda {
+    font-size: 12px;
+    color:#000000;
+    padding:10px;
+    margin: 0 0 0 10px;
+    border: solid 1px #FF0000;
+    background-color: #FFFFCC;
+    line-height: 25px;
+}
+
+.form h2 {
+    
+    margin: 0 !important;
+    padding: 0 5px 10px 5px !important;
+    font-weight: normal;
+}
+
+/**
+ * Contratação
+ */ 
+ .ez-ativo input[type=checkbox] {
+     cursor: pointer;
+ }
+

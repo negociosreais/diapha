@@ -1,0 +1,127 @@
+table.lista th,
+table.lista td{
+    padding:4px;
+    border-top: solid 1px #fff;
+    font-size: 11px;
+}
+
+table.lista td.alterna{
+    background: #f2f2f2;
+}
+
+table.lista td{
+    background: #ffffff;
+    vertical-align: middle;
+    height: 20px;
+}
+
+table.lista th {
+    background: #f2f2f2;
+    vertical-align: middle;
+    height: 20px;
+    font-weight: bold;
+}
+
+table.borda{
+    border:solid 1px #ccc !important;
+}
+
+table.lista tr.mouse td{
+    background: #fefbd6 !important;
+    color: #000 !important;
+    border-top: solid 1px #c0c0c0 !important;
+    border-bottom: solid 1px #c0c0c0 !important;
+}
+
+table.lista tr.alterna td{
+    background: #f3fbfc;
+}
+
+table.lista tr.statusInativo td {
+    background: #fbfbfb !important;
+    color: #c0c0c0 !important;
+}
+
+table.lista .trRodape td {
+    background: #b9e3b3;
+    color: #1f441a;
+}
+table.lista .trRodape td a {
+    color: #1f441a;
+    text-decoration: underline;
+}
+
+table.lista hr {
+    margin: 0;
+}
+
+
+.paginacao {
+    margin-top: 10px;
+}
+
+/** Lista interna **/
+
+table.listaInterna th,
+table.listaInterna td{
+    padding:4px;
+    border-top: none;
+    font-size: 11px;
+}
+
+table.listaInterna td.alterna{
+    background: #f2f2f2;
+}
+
+table.listaInterna tr.alterna td{
+    background: #f3fbfc;
+}
+
+table.listaInterna td{
+    background: #ffffff;
+    vertical-align: middle;
+    height: 20px;
+}
+
+table.listaInterna th {
+    background: #f2f2f2;
+    vertical-align: middle;
+    height: 20px;
+    font-weight: bold;
+}
+
+table.listaInterna tr.mouse td{
+    background: #fefbd6 !important;
+    color: #000 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+table.listaInterna hr {
+    margin: 0;
+}
+
+table.lista tr.setaCima td {
+    padding: 0 0 0 20px;
+    height: 8px !important;
+}
+
+table.comentarios tr td {
+    background: #eff9ee;
+    font-size: 11px;
+}
+
+table.comentarios a {
+    color: #0080FF;
+    font-size: 11px;
+}
+
+table.notificacoes tr td {
+    font-size: 10px !important;
+    line-height: 10px;
+    border-bottom: solid 1px #cccccc;
+}
+
+table.notificacoes tr td .legenda {
+    font-size: 9px !important;
+}

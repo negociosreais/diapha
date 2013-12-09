@@ -1,0 +1,10 @@
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/external/jquery.bgiframe-2.1.2.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.button.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.resizable.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="<?= base_url().TEMPLATE; ?>/js/jquery-ui/ui/jquery.effects.core.js"></script>

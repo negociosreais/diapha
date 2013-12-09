@@ -1,0 +1,31 @@
+table.lista {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table.lista th,
+table.lista td{
+    border:solid 1px #ccc !important;
+    font-size: 10px;
+    padding:4px;
+}
+
+table.lista td.alterna{
+    background: #f2f2f2;
+}
+
+table.lista td{
+    background: #ffffff;
+    vertical-align: middle;
+    height: 20px;
+}
+
+table.lista th {
+    background: #f2f2f2;
+    vertical-align: middle;
+    height: 20px;
+}
+
+table.borda{
+    border:solid 1px #ccc !important;
+}
