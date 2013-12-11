@@ -160,11 +160,17 @@ class Diapha extends CI_Controller {
             $param['categorias'] = usuario('categorias');
         endif;
 
+        $dados['total_geral'] = count($this->relato_model->selecionarRelatos($param));
+        
+        $param['id_usuario'] = usuario('id_usuario');
+        $dados['total_usuario'] = count($this->relato_model->selecionarRelatos($param));
+        
         if ($_GET['meusrelatos'] == '1'):
             $dados['pagina'] = "meusrelatos";
-            $param['fb_email'] = usuario('email_facebook');
+        else:
+            unset($param['id_usuario']);
         endif;
-
+        
         $param['limit'] = '0,5';
         $param['st_status'] = $_GET['status'];
         $dados['relatos'] = $this->relato_model->selecionarRelatos($param);
@@ -180,24 +186,23 @@ class Diapha extends CI_Controller {
         endif;
 
         // Vamos pegar a quantidade de relatos do usuário logado de acordo com o status
-        $param['fb_email'] = usuario('email_facebook');
+        $param['id_usuario'] = usuario('id_usuario');
 
         // Total
         unset($param['limit']);
         unset($param['st_status']);
-        $dados['total'] = count($this->relato_model->selecionarRelatos($param));
-
+        
         // Não respondidos
-        $param['st_status'] = "0";
-        $dados['nao_respondido'] = count($this->relato_model->selecionarRelatos($param));
+        //$param['st_status'] = "0";
+        //$dados['nao_respondido'] = count($this->relato_model->selecionarRelatos($param));
 
         // Em análise
-        $param['st_status'] = "1";
-        $dados['em_analise'] = count($this->relato_model->selecionarRelatos($param));
+        //$param['st_status'] = "1";
+        //$dados['em_analise'] = count($this->relato_model->selecionarRelatos($param));
 
         // Resolvido
-        $param['st_status'] = "2";
-        $dados['resolvido'] = count($this->relato_model->selecionarRelatos($param));
+        //$param['st_status'] = "2";
+        //$dados['resolvido'] = count($this->relato_model->selecionarRelatos($param));
 
         $this->layout->layout("layout_portal");
 
@@ -207,7 +212,8 @@ class Diapha extends CI_Controller {
     function propostas($c, $m) {
 
         checa_logado();
-
+        
+        $this->load->model('relato/relato_model');
         $this->load->model('proposta/proposta_model');
         $this->load->model('orgao/orgao_model');
         $this->load->model("tools/tools_model");
@@ -215,9 +221,16 @@ class Diapha extends CI_Controller {
         $param = $_GET;
         $data['pagina'] = "propostas";
 
+        $data['total_geral'] = count($this->relato_model->selecionarRelatos($param));
+        
+        $param['id_usuario'] = usuario('id_usuario');
+        $data['total_usuario'] = count($this->relato_model->selecionarRelatos($param));
+        
         if ($_GET['minhaspropostas'] == '1'):
             $data['pagina'] = "minhaspropostas";
             $param['id_usuario'] = usuario('id_usuario');
+        else:
+            unset($param['id_usuario']);
         endif;
 
         $param['limit'] = '0,5';

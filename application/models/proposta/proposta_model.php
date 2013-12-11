@@ -8,8 +8,9 @@ class Proposta_Model extends CI_Model {
 
     function selecionarPropostas($param) {
 
-        $sql = "SELECT p.*
-                FROM proposta p";
+        $sql = "SELECT p.*, u.nm_usuario
+                FROM proposta p
+                LEFT JOIN usuario u ON p.id_usuario = u.id_usuario";
         
         if ($param['id_usuario'] != ""):
             $sql .= " WHERE p.id_usuario = '".$param['id_usuario']."'";

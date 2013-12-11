@@ -226,30 +226,30 @@ usuario('cidade', $cidade);
 <div class="grid_4">
     <div class="caixa menu-perfil">
 
-        <ul class="nav nav-pills nav-stacked">
-            <li>
-                <a href="?view=feed&intervalo=<?= $intervalo; ?>"  <?= ($pagina == 'relatos') ? 'class="btn-info"' : ''; ?>>Relatos <span class="badge badge-inverse pull-right"><?= $total; ?></span></a>
-                <!--<ul class="nav">
-                    <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=0"><span class="status nao-respondido"><?= $nao_respondido; ?> pendentes</span></a></li>
-                    <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=1"><span class="status em-analise"><?= $em_analise; ?> em análise</span></a></li>
-                    <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=2"><span class="status respondido"><?= $resolvido; ?> resolvidos</span></a></li>
-                </ul>-->
-            </li>
-            
-            <?
-            if (checa_permissao(array('cidadao'), true)):
-                ?>
+            <ul class="nav nav-pills nav-stacked">
                 <li>
-                    <a href="<?= site_url('') ?>?view=feed&meusrelatos=1&intervalo=<?= $intervalo; ?>" <?= ($pagina == 'meusrelatos') ? 'class="btn-info"' : ''; ?>>Meus Relatos</a>
+                    <a href="?view=feed&intervalo=<?= $intervalo; ?>"  <?= ($pagina == 'relatos') ? 'class="btn-info"' : ''; ?>>Relatos <span class="badge badge-inverse pull-right"><?= $total_geral; ?></span></a>
+                    <!--<ul class="nav">
+                        <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=0"><span class="status nao-respondido"><?= $nao_respondido; ?> pendentes</span></a></li>
+                        <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=1"><span class="status em-analise"><?= $em_analise; ?> em análise</span></a></li>
+                        <li><a href="<?= $_SERVER ['REQUEST_URI']; ?>&status=2"><span class="status respondido"><?= $resolvido; ?> resolvidos</span></a></li>
+                    </ul>-->
                 </li>
-                
-                <li>
-                    <a href="<?= site_url('') ?>?view=propostas&minhaspropostas=1&intervalo=<?= $intervalo; ?>" <?= ($pagina == 'minhaspropostas') ? 'class="btn-info"' : ''; ?>>Minhas Propostas</a>
-                </li>
+
                 <?
-            endif;
-            ?>
-        </ul>
+                if (checa_permissao(array('cidadao'), true)):
+                    ?>
+                    <li>
+                        <a href="<?= site_url('') ?>?view=feed&meusrelatos=1&intervalo=<?= $intervalo; ?>" <?= ($pagina == 'meusrelatos') ? 'class="btn-info"' : ''; ?>>Meus Relatos<span class="badge badge-inverse pull-right"><?= $total_usuario; ?></span></a>
+                    </li>
+
+                    <li>
+                        <a href="<?= site_url('') ?>?view=propostas&minhaspropostas=1&intervalo=<?= $intervalo; ?>" <?= ($pagina == 'minhaspropostas') ? 'class="btn-info"' : ''; ?>>Minhas Propostas</a>
+                    </li>
+                    <?
+                endif;
+                ?>
+            </ul>
     </div>
     <div class="caixa menu-perfil">
         <ul class="nav nav-pills nav-stacked">
@@ -286,7 +286,7 @@ usuario('cidade', $cidade);
             </li>
         </ul>
     </div>
-    <button class="btn btn-primary btn-large"><a href="<?= site_url('proposta/cadastrar'); ?>">Cadastrar proposta!</a></button>
+    <a href="<?= site_url('proposta/cadastrar'); ?>"><button class="btn btn-info btn-large">Cadastrar proposta!</button></a>
 </div>
 
 <div class="grid_20">

@@ -108,6 +108,9 @@ endif;
                         <li>
                             <a href="<?= site_url(''); ?>">Home</a>
                         </li>
+                        <li>
+                            <a href="?view=mapa<?= ($_GET['meusrelatos']) ? '&meusrelatos=1' : '' ?>">Mapa</a>
+                        </li>
                         <li><a href="<?= site_url('portal/quem_somos'); ?>">Quem somos</a></li>
                     </ul>
                 </div>

@@ -250,6 +250,7 @@ $route['relato/apoio']                                 = "diapha/relato/apoiar";
  */
 $route['proposta/cadastrar']                           = "diapha/proposta/cadastrar";
 $route['proposta/salvar']                              = "diapha/proposta/salvar";
+$route['proposta/detalhes']                            = "diapha/proposta/detalhes";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

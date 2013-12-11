@@ -985,7 +985,7 @@ table.perfis td {
 }
 
 #diapha .datahora {
-    font-size: 11px;
+    font-size: 13px;
     font-style: italic;
 }
 
@@ -1760,7 +1760,7 @@ div.licitacao .itens tr td {
 }
 
 .feeds .feed-content .feed-header b {
-    font-size: 18px;
+    font-size: 16px;
     color: #20606a; 
     font-weight: normal;
 }

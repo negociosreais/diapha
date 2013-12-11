@@ -62,8 +62,9 @@ endif;
 
     .datahora {
         color:#999999;
-        font-size: 11px;
+        font-size: 13px;
         margin-top: 5px;
+        margin-bottom: 10px;
     }
 
     .status {
@@ -190,7 +191,24 @@ endif;
                     ?>
 
                     <tr>
-                        <td width="100">
+                        <td>
+                            <p style="font-size: 18px;">
+                                <br>
+                                <?= $relato['ds_relato']; ?>
+                            </p>
+
+                            <div class="clear" style="height: 10px; margin-bottom: 10px;"></div>
+                            
+                            <div class="clear"></div>
+
+                            <p class="datahora">
+                                <img src="<?= base_url() . TEMPLATE; ?>/img/icones/icon-relogio.png" />
+                                Enviado em <?= formata_data_extenso(formataDate($relato['dt_cadastro'], "-")); ?> às <?= substr($relato['hr_cadastro'], 0, 5) ?>.
+                                <br>
+                                <img src="<?= base_url() . TEMPLATE; ?>/img/icones/icon-map-marcador.png" />
+                                Local: <?= $relato['ds_endereco'] . ", " . $relato['nm_bairro'] . ", " . $relato['nm_cidade'] . ", " . $relato['nm_estado']; ?>
+                            </p> 
+                            
                             <?
                             if ($relato['nm_foto'] != ''):
                                 ?>
@@ -202,30 +220,6 @@ endif;
                             <?
                             endif;
                             ?>
-                            <div class="clear" style="height: 10px;"></div>
-                            <div id="mapa" class="img-polaroid" style="height: 200px;"></div>
-                            
-                        </td>
-                        <td>
-
-                            <div class="barraStatus">
-                                <?= $status; ?>
-                            </div>
-
-                            <p>
-                                <br>
-                                <?= $relato['ds_relato']; ?>
-                            </p>
-
-                            <div class="clear"></div>
-
-                            <p class="datahora">
-                                <img src="<?= base_url() . TEMPLATE; ?>/img/icones/icon-relogio.png" />
-                                Enviado em <?= formata_data_extenso(formataDate($relato['dt_cadastro'], "-")); ?> às <?= substr($relato['hr_cadastro'], 0, 5) ?>.
-                                <br>
-                                <img src="<?= base_url() . TEMPLATE; ?>/img/icones/icon-map-marcador.png" />
-                                Local: <?= $relato['ds_endereco'] . ", " . $relato['nm_bairro'] . ", " . $relato['nm_cidade'] . ", " . $relato['nm_estado']; ?>
-                            </p> 
 
                             <?
                             $preferencias = unserialize(usuario('ds_preferencias'));
@@ -310,7 +304,16 @@ endif;
                                 endif;
                             endif;
                             ?>
+                            
+                        </td>
+                        <td width="250">
 
+                            <div class="barraStatus">
+                                <?= $status; ?>
+                            </div>
+                            <div class="clear" style="height: 10px; margin-bottom: 10px;"></div>
+                            <div id="mapa" class="img-polaroid" style="height: 200px;"></div>
+                            
                         </td>
                     </tr>
 
@@ -355,6 +358,8 @@ $(document).ready(function() {
     });
         
     $('.btn').tooltip()
+    
+    carregarLocalDoRelatoNoMapa(<?= $relato['ds_latitude']; ?>,<?= $relato['ds_longitude']; ?>);
 });
 
 function carregarMapa() {
@@ -367,10 +372,16 @@ function carregarMapa() {
 }
 
 function carregarLocalDoRelatoNoMapa(lat, lng) {
-    alert('lat: '+lat+' / lng: '+lng);
-    var point = new google.maps.LatLng(lat, lng);
-    //map.setCenter(point, 3);
     
+    var point = new google.maps.LatLng(lat, lng);
+    var options = {
+          map: map,
+          position: new google.maps.LatLng(lat, lng)
+        };
+        
+        map.setZoom(14);
+        map.setCenter(options.position);
+        
     var markerIcon = {
             url: '<?= base_url(); ?>arquivos/diapha/ico/crime_vermelho.png',
             size: new google.maps.Size(40, 40),
@@ -457,7 +468,5 @@ function alterarStatus() {
     
     
 }
-
-carregarLocalDoRelatoNoMapa(<?= $relato['ds_latitude']; ?>,<?= $relato['ds_longitude']; ?>);
 
 </script>

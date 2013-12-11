@@ -24,37 +24,19 @@ class Proposta extends CI_Controller {
         $param = $_GET;
         $dados['pagina'] = "propostas";
 
-        if ($_GET['minhaspropostas'] == '1'):
-            $dados['pagina'] = "minhaspropostas";
-            $param['id_usuario'] = usuario('id_usuario');
-        endif;
-
-        $param['limit'] = '0,5';
-        $param['status_proposta'] = $_GET['status'];
-        $dados['propostas'] = $this->relato_model->selecionarRelatos($param);
-
         $param['status'] = "Ativo";
 
-        // Vamos pegar a quantidade de relatos do usuário logado de acordo com o status
-        $param['id_usuario'] = usuario('id_usuario');
-
-        // Total
-        unset($param['limit']);
-        unset($param['st_status']);
-        $dados['total'] = count($this->relato_model->selecionarRelatos($param));
-
-        // Não respondidos
-        $param['st_status'] = "0";
-        $dados['nao_respondido'] = count($this->relato_model->selecionarRelatos($param));
-
-        // Em análise
-        $param['st_status'] = "1";
-        $dados['em_analise'] = count($this->relato_model->selecionarRelatos($param));
-
-        // Resolvido
-        $param['st_status'] = "2";
-        $dados['resolvido'] = count($this->relato_model->selecionarRelatos($param));
+        $dados['total_geral'] = count($this->relato_model->selecionarRelatos($param));
         
+        $param['id_usuario'] = usuario('id_usuario');
+        $dados['total_usuario'] = count($this->relato_model->selecionarRelatos($param));
+        
+        if ($_GET['meusrelatos'] == '1'):
+            $dados['pagina'] = "meusrelatos";
+        else:
+            unset($param['id_usuario']);
+        endif;
+ 
         $this->layout->layout("layout_portal", $dados);
         $this->layout->view("diapha/cadastrar_proposta_view", $dados);
     }
@@ -81,7 +63,19 @@ class Proposta extends CI_Controller {
             redirect('?view=propostas&minhaspropostas=1&intervalo=');
         endif;
     }
+    
+    function detalhes() {
+        
+        $dados['proposta'] = $this->proposta_model->selecionarProposta($_GET['id']);
+        $dados['title'] = "Diapha: " . $dados['proposta']['ds_proposta'];
+        $dados['description'] = "Diapha: " . $dados['proposta']['ds_proposta'];
+        
+        $this->layout->layout("layout_portal", $dados);
+        $this->layout->view("diapha/detalhes_proposta_view", $dados);
+    }
 }
+
+
 
 /* 
  * To change this license header, choose License Headers in Project Properties.

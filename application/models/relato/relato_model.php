@@ -8,16 +8,19 @@ class Relato_Model extends CI_Model {
 
     function selecionarRelatos($param) {
 
-        $sql = "SELECT a.*,b.ds_icones, b.nm_categoria, b.nm_apelido,
-                    (SELECT count(*) FROM apoio ap WHERE ap.id_relato = a.id_relato) as apoios
-                    FROM relato a
-                    LEFT JOIN relato_categoria b ON b.id_categoria = a.id_categoria
-                    
+        $sql = "SELECT a.*,b.ds_icones, 
+                b.nm_categoria, 
+                b.nm_apelido,
+                u.nm_usuario,
+                (SELECT count(*) FROM apoio ap WHERE ap.id_relato = a.id_relato) as apoios
+                FROM relato a
+                LEFT JOIN relato_categoria b ON b.id_categoria = a.id_categoria
+                LEFT JOIN usuario u ON a.id_usuario = u.id_usuario    
                 WHERE 1 = 1";
 
 
-        if ($param['fb_email'] != ""):
-            $sql .= " AND a.fb_email = '$param[fb_email]'";
+        if ($param['id_usuario'] != ""):
+            $sql .= " AND a.id_usuario = ".$param['id_usuario'];
         endif;
 
         if ($param['categoria']):
